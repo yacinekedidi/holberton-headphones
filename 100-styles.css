@@ -1,0 +1,878 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/*# sourceMappingURL=normalize.min.css.map */
+
+:root {
+  /* color */
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-grey: #a0a0a0;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --color-red: #cd3e65;
+  --color-green: #08805b;
+
+  --text-color: var(--color-black);
+  --valid-color: var(--color-green);
+  --error-color: var(--color-red);
+
+  /* font-size */
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+
+  /* header */
+  --header-primary-color: #ffffff;
+  --header-padding-sides: 10%;
+  --header-padding-top: 32px;
+  --header-nav-margin: 20px;
+  --header-nav-font-size: 1.3rem;
+  --header-nav-family: "Source Sans Pro", sans-serif;
+  --secondary-color: #ff6565;
+  /* works */
+  --works-black-color: #071629;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1em;
+  font-family: var(--header-nav-family);
+  color: var(--header-primary-color);
+  overflow-x: hidden;
+}
+
+/* ----------
+              Header 
+          -------------*/
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background: url("images/headphones_hero_1.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__nav {
+  padding-top: var(--header-padding-top);
+  display: flex;
+  padding-left: var(--header-padding-sides);
+  padding-right: var(--header-padding-sides);
+  margin-bottom: 18%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.header__logo {
+  margin: 2% 0 0 15%;
+  height: 32px;
+  width: 161px;
+}
+
+.header__list {
+  margin: -3% 5% 0 0;
+  font-size: var(--header-nav-font-size);
+  font-weight: 600;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  position: absolute;
+}
+
+.header__item {
+  width: 80px;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.header__item,
+.header__link,
+.header__link:visited {
+  color: var(--header-primary-color);
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: var(--secondary-color);
+}
+
+.header .header__icon {
+  cursor: pointer;
+  padding: 2.5rem;
+  position: relative;
+  user-select: none;
+}
+
+.header .header__icon .navicon {
+  background-color: var(--header-primary-color);
+  display: block;
+  width: 2rem;
+  height: 0.2rem;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.header .header__icon .navicon::before,
+.header .header__icon .navicon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--header-primary-color);
+  transition: all 0.1s ease-out;
+}
+
+.header .header__icon .navicon::before {
+  top: 0.7rem;
+}
+
+.header .header__icon .navicon::after {
+  top: -0.7rem;
+}
+
+.header__btn {
+  display: none;
+}
+
+.header__btn:checked ~ .header__nav .header__list {
+  /* max-height: 100%; */
+  height: 10rem;
+  text-align: center;
+  /* overflow: inherit; */
+}
+
+.header__icon {
+  display: none;
+}
+
+.header__btn:checked + .header__icon .navicon {
+  background: transparent;
+}
+
+.header__btn:checked + .header__icon .navicon::before {
+  transform: rotate(-45deg);
+}
+
+.header__btn:checked + .header__icon .navicon::after {
+  transform: rotate(45deg);
+}
+
+.header__btn:checked + .header__icon .navicon::before,
+.header__btn:checked + .header__icon .navicon::after {
+  top: 0;
+}
+
+/* -------------
+              hero section
+          ---------------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.hero__head {
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+}
+
+.hero__brief {
+  font-size: 1.5rem;
+}
+
+.hero__button {
+  height: 44px;
+  width: 162px;
+  padding: 1.3rem;
+  border-radius: 20px;
+  box-shadow: 0px 2px 20px 0px #00000080;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  pointer-events: all;
+  margin: 1.8rem auto;
+  filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+}
+
+.hero__button:active,
+.hero__button:hover {
+  opacity: 0.9;
+}
+
+.hero__link,
+.hero__link:visited {
+  color: var(--header-primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero__description {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-align: center;
+  width: 50%;
+  margin-top: 3.5rem;
+  column-width: auto;
+  column-count: auto;
+}
+@media (max-width: 768px) {
+  :root {
+    --header-padding-sides: 60px;
+  }
+
+  .header__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .header__nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30%;
+  }
+
+  .hero__head {
+    padding: 5% 5%;
+    line-height: 1.5rem;
+  }
+  .hero__title {
+    line-height: 3.5rem;
+  }
+
+  .hero__button {
+    margin-top: -2rem;
+  }
+
+  .hero__description {
+    width: 100%;
+    padding: 2% 2%;
+  }
+  .header__logo {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+  }
+
+  .header__icon {
+    display: block;
+  }
+
+  .header__list {
+    flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    /* transition: overflow 0.2s ease-out; */
+  }
+
+  /* .header__list:not(:last-child) {
+              margin-bottom: 60px;
+            } */
+
+  .header__nav {
+    justify-content: center;
+  }
+
+  .hero {
+    margin: -0.1rem 0;
+    padding: 1.5rem;
+  }
+  .header {
+    background-position: 40% 0;
+  }
+
+  /* .header:has(.header__btn:checked) {
+              background-position: 80% 0;
+            } */
+}
+
+/* -------------
+              works section
+          ---------------- */
+
+.works {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  width: 100%;
+  color: var(--works-black-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.works__description {
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.works__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 5rem auto 3rem;
+}
+
+.works
+  :is(.holberton_school-icon-ic_hearing, .holberton_school-icon-ic_video, .holberton_school-icon-ic_music, .holberton_school-icon-ic_sound) {
+  font-size: 78px;
+  color: var(--secondary-color);
+}
+
+.works__text {
+  font-size: 1.2rem;
+}
+
+.works__services {
+  width: 100%;
+  display: flex;
+  margin: 5rem auto;
+  flex-basis: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 94px;
+}
+
+.works__service {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.results {
+  color: var(--header-primary-color);
+  width: 100%;
+  min-height: 100vh;
+  background: url("images/headphones_hero_2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.results__description {
+  margin: 120px auto;
+}
+
+.results__title {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.results__percenteges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 150px;
+  padding: 4em;
+  width: 100%;
+}
+
+/* .results__item {
+  background-image: url("images/pentagone.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.results__item {
+  position: relative;
+  width: 54px;
+  box-sizing: content-box;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: var(--color-red) transparent;
+  transform: scale(2);
+}
+
+.results__item:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-red);
+}
+
+.results__item h2 {
+  font-size: 2rem;
+  position: absolute;
+  top: -67px;
+  left: 5px;
+}
+.results__item span {
+  position: absolute;
+  width: 90px;
+  top: -23px;
+  left: -4px;
+  font-size: 0.75rem;
+  /* left: 10px; */
+}
+
+@media (max-width: 768px) {
+  .results__description {
+    margin: 120px auto;
+    line-height: 2.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .results__percenteges {
+    margin-bottom: 120px;
+  }
+}
+
+/* -------------
+              contact section
+          ---------------- */
+
+.contact {
+  color: var(--color-black);
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+  padding: 0 0 2rem;
+}
+
+legend {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  padding: 0 0 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  position: relative;
+  width: 100%;
+  padding: 1.2rem;
+  line-height: 1;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: var(--color-white);
+  box-shadow: none;
+  outline: 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding-right: 3rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 0.1rem solid var(--color-grey);
+  /* background-color: var(--color-light-grey); */
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: var(--font-size-small);
+}
+
+/* Form group
+          ============================= */
+
+.form-group {
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--color-white);
+}
+
+.form-group:last-child {
+  align-self: center;
+}
+
+.form-group:focus-within {
+  background-color: var(--color-light-grey);
+  transition: 0.3s;
+}
+
+.form-group .hero__button {
+  margin-top: -0.5rem;
+  box-shadow: none;
+  filter: none;
+}
+
+/* Form field
+                ============================= */
+
+.form-field-container {
+  position: relative;
+}
+
+.form-field-icon {
+  font-style: normal;
+}
+
+/* Form help
+                ============================= */
+
+.form-group .form-help {
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.019rem;
+  color: var(--color-dark-grey);
+  font-size: var(--font-size-small);
+  max-height: 0;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.form-group:focus-within .form-help {
+  max-height: 20rem;
+  margin: 0.4rem 0 0;
+}
+
+/* Form error handling
+      ============================= */
+
+/* The following code is used to place the icon in the after pseudo element. Because after and before are not possible in an input, we need to use a span that will be positioned on the right of our input. */
+
+input:not(:placeholder-shown) ~ .form-field-icon::after {
+  height: 100%;
+  right: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 1.3em;
+}
+
+/* Because inputs are invalid by default, we need to be careful and show the icon when we are not in focus and when when the input is not empty (placeholder-shown). Careful with this one because it is not supported everywhere. */
+
+input:required:invalid:not(:focus):not(:placeholder-shown)
+  ~ .form-field-icon::after {
+  content: "✘";
+  color: var(--error-color);
+}
+
+input:required:valid ~ .form-field-icon::after {
+  content: "✔";
+  color: var(--valid-color);
+}
+
+/* We want to hide the helper text when we are not in focus. The tilte allows us to select a sibling element in CSS */
+
+input:required:valid ~ .form-help {
+  max-height: 0;
+}
+
+/* Showing a border in a different color is good but not enough. For accessibility purposes, we added an icon when the input is valid or invalid to have a visual distinction that is not only color based.*/
+
+input:required:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border: 0.1rem solid var(--error-color);
+}
+
+input:required:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  border: 0.1rem solid var(--valid-color);
+}
+
+/* -----
+    footer 
+  ------ */
+
+.footer {
+  background-color: var(--works-black-color);
+  min-height: 30vh;
+  height: 30%;
+  /* height: 30vh; */
+}
+
+.container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.footer__nav {
+  display: flex;
+}
+
+.footer__nav > li {
+  padding: 5px;
+}
+
+.footer__nav > li {
+  display: inline-block;
+  fill: var(--color-white);
+
+  padding: 15px;
+}
+
+.footer span {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.35;
+}
+
+.footer .footer__logo {
+  margin: 0;
+  height: 32px;
+  width: 161px;
+}
+
+.footer .footer__link:hover img {
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .footer__nav {
+    padding: 0;
+  }
+}

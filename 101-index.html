@@ -1,0 +1,250 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="101-styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="/fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="holberton_school-icon/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <input type="checkbox" class="header__btn" id="header__btn" />
+
+      <label for="header__btn" class="header__icon"
+        ><span class="navicon"></span
+      ></label>
+
+      <img src="images/logo_headphones.png" alt="" class="header__logo" />
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#works" class="header__link">what we do</a>
+          </li>
+          <li class="header__item">
+            <a href="#results" class="header__link">our results</a>
+          </li>
+          <li class="header__item">
+            <a href="#contact" class="header__link">contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <div class="hero__head">
+          <h2 class="hero__title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h2>
+          <p class="hero__brief">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            quasi.
+          </p>
+        </div>
+        <button class="hero__button">
+          <a href="#" class="hero__link">CALL TO ACTION</a>
+        </button>
+        <p class="hero__description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+          delectus ea corporis atque ab, cupiditate saepe praesentium unde! Amet
+          excepturi, voluptate praesentium adipisci magni ea sed, sapiente
+          quaerat provident delectus eos obcaecati facilis facere placeat, nobis
+          beatae unde quidem aliquid. Quisquam nisi iste possimus voluptates
+          laudantium reiciendis fuga, tempore quo consequatur soluta animi
+          corrupti.
+        </p>
+      </section>
+    </header>
+    <section class="works" id="works">
+      <div class="works__description">
+        <h2 class="works__title">What we do...</h2>
+        <p class="works__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          odit, incidunt temporibus veniam impedit possimus expedita.<br />
+          Repellat quis deleniti vel dolorum fuga quas. Aspernatur quam deserunt
+          sed dicta sapiente eaque reiciendis. eaque reiciendis.<br />
+          nobis nemo veniam necessitatibus eligendi repudiandae asperiores ipsa,
+          amet eaque reiciendis eaque reiciendis.
+        </p>
+      </div>
+      <div class="works__services">
+        <div class="works__service">
+          <i class="holberton_school-icon-ic_sound"></i>
+          <h3>Lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit amet <br />
+            elit. Expedita, harum.
+          </p>
+        </div>
+        <div class="works__service">
+          <i class="holberton_school-icon-ic_video"></i>
+          <h3>Lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit amet <br />
+            elit. Expedita, harum.
+          </p>
+        </div>
+        <div class="works__service">
+          <i class="holberton_school-icon-ic_music"></i>
+          <h3>Lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit amet <br />
+            elit. Expedita, harum.
+          </p>
+        </div>
+        <div class="works__service">
+          <i class="holberton_school-icon-ic_hearing"></i>
+          <h3>Lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit amet <br />
+            elit. Expedita, harum.
+          </p>
+        </div>
+      </div>
+      <div class="results" id="results">
+        <div class="results__description works__description">
+          <h2 class="results__title works__title">
+            Our results speak for themselves
+          </h2>
+          <p class="results__text works__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit odit, incidunt temporibus veniam impedit possimus
+            expedita.<br />
+            Repellat quis deleniti vel dolorum fuga quas. Aspernatur quam
+            deserunt sed dicta sapiente eaque reiciendis. eaque reiciendis.<br />
+            nobis nemo veniam necessitatibus eligendi repudiandae asperiores
+            ipsa, amet eaque reiciendis eaque reiciendis.
+          </p>
+        </div>
+
+        <div class="results__percenteges">
+          <div class="results__item">
+            <h2>+2%</h2>
+            <span>Lorem ipusm dolor</span>
+          </div>
+          <div class="results__item">
+            <h2>+2%</h2>
+            <span>Lorem ipusm dolor</span>
+          </div>
+          <div class="results__item">
+            <h2>+2%</h2>
+            <span>Lorem ipusm dolor</span>
+          </div>
+          <div class="results__item">
+            <h2>+2%</h2>
+            <span>Lorem ipusm dolor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <form action="#" method="POST">
+        <fieldset>
+          <legend class="visually-hidden">Contact us</legend>
+          <div class="form-group col-1-2">
+            <label for="name">Name</label>
+            <div class="form-field">
+              <span class="form-field-container">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=" "
+                  pattern="[A-Za-zÀ-ž\s]{3,}"
+                  maxlength="35"
+                  autocomplete="on"
+                  accesskey="f"
+                  required
+                />
+                <i class="form-field-icon"></i>
+              </span>
+              <p class="form-help">
+                name should be at least 3 characters and only contains letters
+              </p>
+            </div>
+          </div>
+          <div class="form-group col-2-3">
+            <label for="your-email">Email</label>
+            <div class="form-field">
+              <span class="form-field-container">
+                <input
+                  type="email"
+                  name="your-email"
+                  id="your-email"
+                  placeholder=" "
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  maxlength="55"
+                  autocomplete="on"
+                  accesskey="e"
+                  required
+                />
+                <i class="form-field-icon"></i>
+              </span>
+            </div>
+          </div>
+          <div class="form-group col-2-3">
+            <label for="message">Your message</label>
+            <div class="form-field">
+              <span class="form-field-container">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder=" "
+                  minlength="10"
+                  accesskey="c"
+                  required
+                  cols="30"
+                  rows="6"
+                ></textarea>
+              </span>
+              <p class="form-help">message should be at least 10 characters</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="hero__button">
+              <a href="#" class="hero__link">CALL TO ACTION</a>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <img src="images/logo_headphones.png" alt="" class="footer__logo" />
+        <div>
+          <ul class="footer__nav">
+            <li>
+              <a href="https://www.facebook.com" class="footer__link"
+                ><img
+                  src="images/Holberton School - Headphone company/Facebook_White-1.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com" class="footer__link">
+                <img
+                  src="images/Holberton School - Headphone company/Twitter_White-1.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" class="footer__link"
+                ><img
+                  src="images/Holberton School - Headphone company/Instagram_White-1.svg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span>&copy;headphones 2020</span>
+    </footer>
+  </body>
+</html>
